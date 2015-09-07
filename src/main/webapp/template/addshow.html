@@ -1,0 +1,64 @@
+<form name="addressForm" novalidate>
+	<table border="0">
+		<tr>
+			<td colspan="2">{{message}}</td>
+		</tr>
+		<tr>
+			<td>Address Line1</td>
+			<td>
+				<input name="addressLine1" type="text" ng-model="addressLine1" required> 
+				<span style="color: red" ng-show="addressForm.addressLine1.$dirty && addressForm.addressLine1.$invalid">
+					<span ng-show="addressForm.addressLine1.$error.required">Invalid Address Line1</span>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Address Line2</td>
+			<td>
+				<input name="addressLine2" type="text" ng-model="addressLine2" required> 
+				<span style="color: red" ng-show="addressForm.addressLine2.$dirty && addressForm.addressLine2.$invalid">
+					<span ng-show="addressForm.addressLine2.$error.required">Invalid Address Line2</span>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>City</td>
+			<td>
+				<input name="city" type="text" ng-model="city" required> 
+				<span style="color: red" ng-show="addressForm.city.$dirty && addressForm.city.$invalid">
+					<span ng-show="addressForm.city.$error.required">Invalid City</span>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Province</td>
+			<td>
+				<input name="province" type="text" ng-model="province" required> 
+				<span style="color: red" ng-show="addressForm.province.$dirty && addressForm.province.$invalid">
+					<span ng-show="addressForm.province.$error.required">Invalid Province</span>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>Country</td>
+			<td>
+				<input name="country" type="text" ng-model="country" required> 
+				<span style="color: red" ng-show="addressForm.coountry.$dirty && addressForm.country.$invalid">
+					<span ng-show="addressForm.coountry.$error.required">Invalid Country</span>
+				</span>
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td><button ng-click="reset()">Reset</button></td>
+			<td>
+				<button	ng-click="submit()">Submit</button>
+			</td>
+		</tr>
+	</table>
+</form>

@@ -1,0 +1,32 @@
+<form name="movieForm" novalidate>
+	<table border="0">
+		<tr>
+			<td colspan="2">{{message}}</td>
+		</tr>
+		<tr>
+			<td>Movie Name:</td>
+			<td>
+				<input name="movieName" type="text" ng-model="movieName" required> 
+				<span style="color: red" ng-show="movieForm.movieName.$dirty && movieForm.movieName.$invalid">
+					<span ng-show="movieForm.movieName.$error.required">Invalid Movie Name</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Duration:</td>
+			<td>
+				<input name="duration" type="text" ng-model="duration" required> 
+				<span style="color: red" ng-show="movieForm.duration.$dirty && movieForm.duration.$invalid">
+					<span ng-show="movieForm.duration.$error.required">Invalid Duration</span>
+				</span>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><button ng-click="reset()">Reset</button></td>
+			<td>
+				<button ng-click="submit()">Submit</button>
+			</td>
+		</tr>
+	</table>
+</form>

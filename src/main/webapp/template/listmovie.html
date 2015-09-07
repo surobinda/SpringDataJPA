@@ -1,0 +1,22 @@
+<b>List of Movies</b>
+<br/>
+<form name="selectMovieForm" novalidate>
+	<table border="1">
+			<tr>
+				<td colspan="4">{{selectedMovie.movieId}}</td>
+			</tr>
+			<tr>
+				<th>select</th>
+				<th>Movie Id</th>
+				<th>Movie Name</th>
+				<th>Duration</th>
+			</tr>
+			<tr ng-repeat="movie in movies">
+				<td><input name="selectedMovie" type="radio" ng-model="selectedMovie.movieId" value="{{movie.movieId}}"/></td>
+				<td>{{movie.movieId}}</td>
+				<td>{{movie.movieName}}</td>
+				<td>{{movie.duration}}</td>
+			</tr>
+			<tr><td colspan="4" align="center"><button ng-click="update('/update')">Update</button></td></tr>
+	</table>
+</form>
